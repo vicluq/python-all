@@ -34,3 +34,14 @@ if name.lower() == "vic" or name.lower() == "luq":
     print("You are a root user")
 
 isVin = ('vic' in name) # checa se a substring vic ta no nome
+
+### Placeholders
+# como trabalhamos com blocos de identação, mas nem sempre queremos definir o bloco
+# usamos placeholders para isso e evitar erro de identação
+
+if len(name) > 10: # condition
+    ... # placeholder
+elif len(name) < 6:
+    pass # another placeholder possibility
+else:
+    print("something!")
