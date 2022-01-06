@@ -3,14 +3,14 @@
 Isso é um comentário em bloco, o que na verdade é uma string não processada
 '''
 
-### Comando print
+### NOTE Comando print
 print("Victoria", "Luquet", sep=' ')
 # Printa os argumentos que passamos
 # sep é o saparador das strings/coisas passadas ao print
 # end é o valor anexado no fim do último argumento
 # ele printa arrays, objetos, strings e numeros
 
-### Interpolação de string com o "f"
+### NOTE Interpolação de string com o "f"
 banco = 122
 print(f"tenho R${banco} no banco")
 print(f'tenho R${banco} no banco')  # serve com single quotes tbm
@@ -28,7 +28,7 @@ myBOOLvar = True  # =1
 
 print(myBOOLvar == 0)  # Operação lógica de igualdade com variáveis
 
-### Descobrindo o type das variáveis
+### NOTE Descobrindo o type das variáveis
 print(type(myBOOLvar), type(myINTvar), sep='\n')
 '''
 Output:
@@ -43,7 +43,7 @@ print(str(someVar))  # 19 (porém string)
 
 # OBS: só posso converter sse o dado for coerente né! tipo int("Luquet")
 
-### Funções built in úteis de type
+### NOTE Funções built in úteis de type
 
 # Py não vai converter um tipo m outro para você que nem JS (str + num ele converte o num em str)
 # nem sempre um dado entregue pelo user pode ser convertido em num, tipo "Vic", logo a gnt checa se é numérico, alfabético, etc
@@ -58,7 +58,7 @@ print(f"str: {str3} -> isdecimal: {str3.isdecimal()}, isnumeric: {str3.isnumeric
 
 # OBS: temo um problema com ponto flutuante... pois as funções checam se só há caracteres numéricos e pontos tão de fora
 
-### Try Catch do python
+### NOTE Try Catch do python
 
 try:
     num1 = float(input("Type num1: "))
@@ -69,3 +69,28 @@ except:
     print("Some error occured!")
 
 # em caso de erro, ao invés de causar a parada do programa, executar o except
+
+try:
+    blabla = "2.55"
+    int(blabla)
+    print("Is convertable to int")
+except:
+    print("Not convertable to int")
+
+# NOTE checkingif it is float
+def is_float(num):
+    try:
+        int(num)
+        return False # If convertable to int, returns false (not float)
+    except:
+        ...
+    
+    try:
+        float(num)
+        return True
+    except:
+        return False
+
+print(is_float("2"))
+print(is_float("2.24"))
+print(is_float("Vick"))

@@ -1,4 +1,4 @@
-###  Operadores -> +, -, /, **, //, %, ()
+### NOTE  Operadores -> +, -, /, **, //, %, ()
 # Exponenciação -> **
 # Divisão arredondada p/ inteiro -> //
 # Precedência: Parenteses -> Potencia/Raíz -> Multiplicação/divisão e módulo -> Add e Sub
@@ -14,7 +14,7 @@ print(f"{result:.2f}")  # Parecido com C (só rola com interpolação)
 
 ### Operadores relacionais -> ==, <=, >=, !=, >, <
 
-### Básico de Formatando string
+### NOTE Básico de Formatando string
 myString = "Hello, Peter"
 age = 16
 

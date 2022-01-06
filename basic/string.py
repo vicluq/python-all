@@ -5,6 +5,7 @@
     # format
     # F-string
     # len
+    # slipt / join
 
 ## len
 # Por baixo, como tudo em py é objeto, len(str) faz str.__len__ e retorna
@@ -20,10 +21,13 @@ print("Ana Júlia" > "Vick") # Falso pois alfabeticamente, o primeiro nome é me
 
 ## ljust e rjust -> bota o name em um dos lados e preenche até completar os N chars
 name = "Luquetinha"
+name.startswith('J') # mas é só fazer name[0] == 'J'
 nameL = name.ljust(20, '*') # Justifica o nome à esquerda e preenche o resto com * ate chegar em 20
 nameR = name.rjust(20, '*')
 
 ## INDEXES -> Cada char tem um índex e podemos manipular só o char e afins
+    # Strings são imutáveis em python, logo não posso fazer str[index] = 'x', tenho qque criar outra
+
 word = "opa meu jovem"
 counter = -1 # -1 pois o primeiro char começa com 0 (index 0)
 
@@ -31,7 +35,7 @@ for c in word:
     ++counter
     print(c)
     if c == 'o':
-        print("Found an O!")
+        print(f"Found an O at index {counter}!")
 
 ## Extraindo substrings -> str[start:end:step]
 size = len(word)
@@ -41,3 +45,6 @@ subWord = word[5:] # sem não passar nada ele pega daquele ponto até tudo ou a 
 subWord = word[:(size - 1)] # 
 print(subWord)
 # índices negativos -> o ultimo char sempre começa no -1 e segue
+
+### Split e Join, mesma ideia de JS, o spplit tem um parametro de separação e guarda os itens numa lista
+
