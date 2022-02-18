@@ -20,6 +20,7 @@ print(f'tenho R${banco} no banco')  # serve com single quotes tbm
 # int - inteiros
 # float - ponto flutuante
 # bool - true e false (1 e 0)
+# FALSY VALUES -> None, [], {}, "", 0
 
 myINTvar = 13  # != '13'
 myFLOATvar = 14.5

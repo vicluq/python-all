@@ -28,3 +28,12 @@ print(f'tenho R${banco} no banco')  # serve com single quotes tbm
 print("Frase: {}\nIdade: {}".format(myString, age))
 # funciona com parâmetros (não precisa ser na ordem mais)!!
 print("Frase: {strn}\nIdade: {i}".format(i = age, strn = myString)) 
+
+### NOTE Trocando variáveis
+var1 = "Value 1"; var2 = "Value 2"; var3 = "Value 3"
+var1, var2, var3 = var3, var1, var2 # boto o valor que quero dar na ordem
+
+### NOTE Ternário 
+message = "An error has ocurred" if False else "Everything ok!"
+
+# OBS: assim como no JS, o OR serve pra atribuição condicional

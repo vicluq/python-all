@@ -7,6 +7,9 @@
     # append, insert(index, elem), pop, del, clear, extend (concat uma listaa com a que chamou o método), etc
     # min, max(lista) -> pegar o maior e o menor valor da listaa
     # range
+    # count(valor) -> quantos desse valor aparece na lista
+    # list.sort(key=, reverse=)
+    # sorted(list, key=, reverse=)
 
 # Basic
 empty_lista = [] # listaa vazia
@@ -48,3 +51,28 @@ impares = list(range(1, 11, 2)) # lista() converte o objeto iterável que passam
 print(impares)
 
 impares.insert(10, 17) # se eu tentar add em um index que seja maior que o tamanho da lista, ela faz append
+
+### NOTE Enumerate -> enumera a lista e nos fornece o index em loops
+    # Não serve só para listas, ela enumera voltas do laço tbm, retornando uma tupla [volta, value], podendo usar com range e iteráveis no geral
+sentence = "Victoria é muito fofa"
+wordList = sentence.split(" ")
+word = ""
+for index, value in enumerate(wordList):
+    if index % 2 == 0:
+        word += value
+
+### NOTE Lista dentro de lista
+matrix = [ [3, 55], [3.76, 145] ]
+enumerateResult = enumerate(matrix)
+print(enumerateResult)
+
+# O loop pode ter mais params, tipo: 
+for val1, val2 in matrix:
+    print(val1, val2) # desempacotando os subarrays
+
+### NOTE Desestruturando listas
+w1, w2, w3, w4 = wordList
+
+# Eu não posso desempacotar com menos variáveis que a lista tem de elementos, logo uso assim com o asterisco:
+w1, w2, *otherWords = wordList # otherWords é uma lista com o resto
+print(otherWords)
