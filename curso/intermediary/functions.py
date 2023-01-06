@@ -25,12 +25,13 @@ talk("")  # Valores falsy são contados cmo algo
 talk("Opa!")
 
 
-# NOTE Se ao final da função não achar o return, o python retorna None por padrão (undefined em JS)
+# NOTE Void -> retorna None por padrão (undefined em JS)
+
+# NOTE -> Higher Order Functions -> retornam ou recebem funcoes
 
 # NOTE Função retornando função -> func()() -> func retorna uma função e assim que chamamos ela
 def funcToVar():
     print("Essa func ta em uma variável")
-
 
 def retFunc():
     return funcToVar
@@ -54,8 +55,12 @@ def sumNums(*args):
         result += args[i]
     return result
 
+def complimentPeople(compliment, *args):
+    # *args = list of people
+    print(compliment + " " + " ".join(args))
 
 print(sumNums(2, 6, 8, 90, 3))
+complimentPeople("Parabens", "Victoria", "Julia", "Luis")
 
 list1 = [4, 7, 2, 5]
 list2 = [13, 7, 344, 90]
@@ -73,3 +78,9 @@ saudation(name = "Victoria", msg = "Hello", lastName = "Luquet")
 
 # NOTE Keyword global para quando criarmos uma variável com o mesmo nome na função, tratarmos como se fosse a mesma do escopo global
 
+def argumentos(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+argumentos(4, 5, nome="Vic", idade=22)
+argumentos(nome="Vic", idade=22)

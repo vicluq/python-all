@@ -66,4 +66,8 @@ for num in range(2, 101):
     while div < prime * prime: # div menores que a raiz do num 
         ...
 
-## For / else -> um else pro for que é executado se o for ir até o fim, mas se houver breaks, ou parar antes, ele não é executado
+## NOTE For / else -> um else pro for que é executado se o for ir até o fim, mas se houver breaks, ou parar antes, ele não é executado
+
+# NOTE Funcionamento dos lacos
+    # criam um iterator com o que fornecemos iter(list | tutple | etc)
+    # a cada ciclo aplicam o next(iterator) para mover o pointer pro proximo elemento

@@ -21,6 +21,7 @@ print(f'tenho R${banco} no banco')  # serve com single quotes tbm
 # float - ponto flutuante
 # bool - true e false (1 e 0)
 # FALSY VALUES -> None, [], {}, "", 0
+# None -> não valor
 
 myINTvar = 13  # != '13'
 myFLOATvar = 14.5
@@ -95,3 +96,8 @@ def is_float(num):
 print(is_float("2"))
 print(is_float("2.24"))
 print(is_float("Vick"))
+
+# NOTE id -> o id da variável na memória, onde ela ta na memória
+    # é como o python acha os elementos na memória
+var = "Luquet"
+print(id(var))

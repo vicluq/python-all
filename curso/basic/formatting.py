@@ -10,10 +10,11 @@
     #  
 div = 12 / 9
 
-# Formatação com casa decimal
+# NOTE Formatação com casa decimal
 print(f"{div:.2f}") 
+print(f"{round(div, 2)}") 
 
-# Formatação com casa decimal + caracteres -> vai add 0s até completar 10 chars à esquerda
+# NOTE Formatação com casa decimal + caracteres -> vai add 0s até completar 10 chars à esquerda
 print(f"{div:0>10.3f}") 
 
 name = "Victoria Luquet"
@@ -22,7 +23,13 @@ print(f"{name:@>20}") # lembrando que ele adiciona o que falta para completar a 
 course = "Engenharia da computação"
 print("{1:->21} -> {0}".format(name, course)) # acessando os dados pelo indeice de cada var (lembrar que posso nomear também)
 
-# ljust e rjust -> bota o name em um dos lados e preenche até completar os N chars
+# NOTE Interpolacao
+nome = "Luquet"
+preco = 26.2313
+frase = "%s cobra R$%.2f" % (nome, preco)
+print(frase)
+
+# NOME ljust e rjust -> bota o name em um dos lados e preenche até completar os N chars
 nameL = name.ljust(20, '*') # Justifica o nome à esquerda e preenche o resto com * ate chegar em 20
 nameR = name.rjust(20, '*')
 
