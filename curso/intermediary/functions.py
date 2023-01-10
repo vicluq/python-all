@@ -10,6 +10,8 @@ def getSum(num1, num2):
 def getSub(num1=0, num2=0):
     return num1 + num2
 
+# ! argumentos padrao com variaveis mutaveis (lista, etc) é o mesmo argumento padrao pra toda funcao, eh o mesmo ponteiro pra tudo
+# logo, ou criamos na funcao ou passamos uma lista ja existente
 
 getSub(3, 5)
 getSub(3)
@@ -84,3 +86,15 @@ def argumentos(*args, **kwargs):
 
 argumentos(4, 5, nome="Vic", idade=22)
 argumentos(nome="Vic", idade=22)
+
+# NOTE Positional Only Params (/) -> tudo q vem antes da barra é obg posicional
+def sum(x, y, /, w, z):
+    return "POP"
+
+sum(3,4,z=9,w=1)
+
+# NOTE Keyword Only Params (*) -> tudo q vem depois do * sao args keyword
+def sum(x, y, *, w, z):
+    return "POP"
+
+sum(3,4,z=9,w=1)
